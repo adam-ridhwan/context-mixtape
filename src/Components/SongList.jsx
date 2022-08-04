@@ -1,10 +1,10 @@
 import { useContext } from 'react';
 import { Song } from '../Components/Song';
-import { INIT_GENRE, INIT_SORT_ORDER } from '../Constants/Constants';
+import { INIT_GENRE, INIT_SORT_ASCENDING } from '../Constants/Constants';
 import { MixtapeContext } from '../Contexts/MixtapeContext';
 
 const sortSongs = (songs, sortOrder) => {
-  return sortOrder === INIT_SORT_ORDER
+  return sortOrder === INIT_SORT_ASCENDING
     ? songs.sort((a, b) => a.year - b.year)
     : songs.sort((a, b) => b.year - a.year);
 };

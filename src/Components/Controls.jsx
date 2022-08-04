@@ -1,5 +1,8 @@
 import { useContext } from 'react';
-import { INIT_SORT_ORDER } from '../Constants/Constants';
+import {
+  INIT_SORT_ASCENDING,
+  INIT_SORT_DESCENDING,
+} from '../Constants/Constants';
 import { MixtapeContext } from '../Contexts/MixtapeContext';
 
 export const Controls = () => {
@@ -20,7 +23,9 @@ export const Controls = () => {
         value={sortOrder}
         onClick={() =>
           setSortOrder(
-            sortOrder === INIT_SORT_ORDER ? 'descending' : INIT_SORT_ORDER
+            sortOrder === INIT_SORT_ASCENDING
+              ? INIT_SORT_DESCENDING
+              : INIT_SORT_ASCENDING
           )
         }
       >

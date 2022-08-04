@@ -32,4 +32,5 @@ export const songs = [
 ];
 
 export const INIT_GENRE = 'all';
-export const INIT_SORT_ORDER = 'ascending';
+export const INIT_SORT_ASCENDING = 'ascending';
+export const INIT_SORT_DESCENDING = 'descending';
