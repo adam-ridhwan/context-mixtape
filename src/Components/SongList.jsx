@@ -1,11 +1,9 @@
-import { Song } from './Song';
+import { useContext } from 'react';
+import { MixtapeContext } from '../Contexts/MixtapeContext';
+import { DisplaySongs } from '../Services/DisplaySongs';
 
 export const SongList = () => {
-  // Your code here! ✨
-  return (
-    <>
-      <h2>TODO: Update taste in music...?</h2>
-      <Song artist='Nickelback' genre='rock' name='Photograph' year={2005} />
-    </>
-  );
+  const { songs, genre, sortOrder } = useContext(MixtapeContext);
+
+  return <DisplaySongs songs={songs} genre={genre} sortOrder={sortOrder} />;
 };
