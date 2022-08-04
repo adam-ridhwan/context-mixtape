@@ -7,7 +7,6 @@ const App = () => {
   return (
     <div className='app'>
       <h1 className='heading'>My 🔥 Mixtape</h1>
-      TODO: make some music...? 🎶
       <MixtapeProvider songs={songs}>
         <Controls />
         <SongList />

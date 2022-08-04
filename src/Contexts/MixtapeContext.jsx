@@ -1,13 +1,11 @@
 import { createContext, useState } from 'react';
-
-export const INITIAL_GENRE = 'all';
-export const INITIAL_SORT_ORDER = 'ascending';
+import { INIT_GENRE, INIT_SORT_ORDER } from '../Constants/Constants';
 
 export const MixtapeContext = createContext();
 
 export const MixtapeProvider = ({ children, songs }) => {
-  const [genre, setGenre] = useState(INITIAL_GENRE);
-  const [sortOrder, setSortOrder] = useState(INITIAL_SORT_ORDER);
+  const [genre, setGenre] = useState(INIT_GENRE);
+  const [sortOrder, setSortOrder] = useState(INIT_SORT_ORDER);
 
   return (
     <MixtapeContext.Provider
